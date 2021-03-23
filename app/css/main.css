@@ -43,6 +43,33 @@ body .banner {
   height: 345px;
   margin-bottom: 50px;
 }
+body .content {
+  max-width: 1250px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+body .content .menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+}
+body .content .menu .menu-item {
+  width: 190px;
+  height: 123px;
+  background: #F2F2F2;
+  border-radius: 16px;
+  margin-bottom: 25px;
+}
 body footer {
   background: #3A3838;
   width: 100%;
