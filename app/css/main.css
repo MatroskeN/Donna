@@ -1,0 +1,11 @@
+@import url("app/libs/magnific-popup/dist/magnific-popup.css");
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+body a {
+  text-decoration: none;
+}
