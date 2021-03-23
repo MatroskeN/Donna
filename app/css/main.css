@@ -1,11 +1,50 @@
 @import url("app/libs/magnific-popup/dist/magnific-popup.css");
+/* pt-sans-regular - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('../fonts/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* pt-sans-700 - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url('../fonts/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/pt-sans-v12-latin-ext_latin_cyrillic-ext_cyrillic-700.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 body {
+  display: block;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+body a {
+  text-decoration: none;
+}
+body header {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #ED1A3A;
+  width: 100%;
+  height: 100px;
 }
-body a {
-  text-decoration: none;
+body .banner {
+  background: url(../img/banner.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 345px;
+  margin-bottom: 50px;
+}
+body footer {
+  background: #3A3838;
+  width: 100%;
+  height: 225px;
 }
