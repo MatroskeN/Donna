@@ -114,7 +114,7 @@ body{
 
                 .order{
                     .myorder{
-                        padding-top: 17px;
+                        padding-top: 26px;
                         padding-left: 10px;
                         display: flex;
                         width: 117px;
@@ -186,7 +186,7 @@ body{
             .menu-item{
                 position: relative;
                 width: 190px;
-                height: 123px;
+                height: 121px;
                 background: #F2F2F2;
                 border-radius: 16px;
                 margin-bottom: 25px;
@@ -300,6 +300,8 @@ body{
             }
         }
         .pizza-head{
+            display: flex;
+            flex-direction: column;
             font-family: PT Sans;
             font-style: normal;
             font-weight: bold;
@@ -313,6 +315,10 @@ body{
             text-align: center;
 
             margin-bottom: 42px;
+
+            svg{
+                margin: 0 auto;
+            }
         }
 
         .catalog{
@@ -321,6 +327,7 @@ body{
             margin:0 auto;
             margin-bottom: 72px;
             .catalog-item{
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 width: 295px;
@@ -338,8 +345,14 @@ body{
                 &:nth-child(4n+4){
                     margin-right: 0;
                 }
-
-                img{
+                .sale{
+                    position: absolute;
+                    top: 16px;
+                    right: 11px;
+                    width: 42px;
+                    height: 18px;
+                }
+                .pizza-pic{
                     margin: 0 auto;
                     width: 254px;
                     height: 222px;
@@ -649,11 +662,17 @@ body{
             .foot-links{
                 margin-left: auto;
                 .socials{
+                    display: flex;
+                    .vk{
+                        margin-left: auto;
+                        
+                    }
                     a{
                         transition: all 0.4s;
                       svg{
                         margin-left: 18px;
                         transition: all 0.4s;
+                        display: flex;
                         &:hover{
                             path{
                                 fill: #FFB900;
@@ -664,7 +683,10 @@ body{
                     
                 }
                 .pizza-logo{
-                    margin-left: 10px;
+                    img{
+                        margin-left: auto;
+                        display: flex;
+                    }
                 }
 
                 .madein{
@@ -791,11 +813,12 @@ body{
           }
         .catalog{
             .catalog-item{
+                position: relative;
                 flex-direction: row !important;
                 border-bottom: 1px solid #C4C4C4;
                 border-radius: unset !important;
                 height: 135px !important;
-                img{
+                .pizza-pic{
                     width: 109px !important;
                     height: 97px !important;
                     margin-top: 11px !important;

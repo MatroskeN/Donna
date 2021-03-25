@@ -125,7 +125,7 @@ body header .header-content .right-menu .phone a {
   color: #FFFFFF;
 }
 body header .header-content .right-menu .order .myorder {
-  padding-top: 17px;
+  padding-top: 26px;
   padding-left: 10px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -205,7 +205,7 @@ body .content .menu {
 body .content .menu .menu-item {
   position: relative;
   width: 190px;
-  height: 123px;
+  height: 121px;
   background: #F2F2F2;
   border-radius: 16px;
   margin-bottom: 25px;
@@ -309,6 +309,15 @@ body .content .menu .item-banner {
   pointer-events: none;
 }
 body .content .pizza-head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: PT Sans;
   font-style: normal;
   font-weight: bold;
@@ -318,6 +327,9 @@ body .content .pizza-head {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 42px;
+}
+body .content .pizza-head svg {
+  margin: 0 auto;
 }
 body .content .catalog {
   display: -webkit-box;
@@ -331,6 +343,7 @@ body .content .catalog {
   margin-bottom: 72px;
 }
 body .content .catalog .catalog-item {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -357,7 +370,14 @@ body .content .catalog .catalog-item:hover {
 body .content .catalog .catalog-item:nth-child(4n+4) {
   margin-right: 0;
 }
-body .content .catalog .catalog-item img {
+body .content .catalog .catalog-item .sale {
+  position: absolute;
+  top: 16px;
+  right: 11px;
+  width: 42px;
+  height: 18px;
+}
+body .content .catalog .catalog-item .pizza-pic {
   margin: 0 auto;
   width: 254px;
   height: 222px;
@@ -659,6 +679,15 @@ body footer .footer-content .foot-catalog .foot-item:nth-last-child(-n+3) {
 body footer .footer-content .foot-links {
   margin-left: auto;
 }
+body footer .footer-content .foot-links .socials {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+body footer .footer-content .foot-links .socials .vk {
+  margin-left: auto;
+}
 body footer .footer-content .foot-links .socials a {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -669,12 +698,20 @@ body footer .footer-content .foot-links .socials a svg {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 body footer .footer-content .foot-links .socials a svg:hover path {
   fill: #FFB900;
 }
-body footer .footer-content .foot-links .pizza-logo {
-  margin-left: 10px;
+body footer .footer-content .foot-links .pizza-logo img {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 body footer .footer-content .foot-links .madein {
   font-family: PT Sans;
@@ -812,6 +849,7 @@ body footer .footer-content .foot-links .madein a:hover {
     color: #fff;
   }
   .content .catalog .catalog-item {
+    position: relative;
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
     -webkit-flex-direction: row !important;
@@ -821,7 +859,7 @@ body footer .footer-content .foot-links .madein a:hover {
     border-radius: unset !important;
     height: 135px !important;
   }
-  .content .catalog .catalog-item img {
+  .content .catalog .catalog-item .pizza-pic {
     width: 109px !important;
     height: 97px !important;
     margin-top: 11px !important;
