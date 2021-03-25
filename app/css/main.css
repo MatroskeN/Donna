@@ -929,9 +929,71 @@ body footer .footer-content .foot-links .madein a:hover {
   footer .mrights p a:hover {
     color: #FFFFFF;
   }
+  .modal {
+    height: 100vh;
+    width: 100%;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    z-index: 15;
+  }
+  .modal #xclose {
+    position: absolute;
+    right: 17px;
+    top: 20px;
+  }
+  .modal .modal-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    margin-top: 70px;
+    margin-left: 50px;
+    padding-right: 59px;
+    width: 100%;
+    height: 200px;
+  }
+  .modal .modal-menu a {
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 20px;
+    color: #3A3838;
+  }
+  .modal .modal-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 162px;
+    padding: 15px;
+    border-top: 1px solid #dedede;
+  }
+  .modal .modal-footer .mfitem {
+    margin: 0 auto;
+    margin-left: 15%;
+    text-align: left;
+    margin-top: 17px;
+  }
+  .modal .modal-footer .mfitem a {
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #3A3838;
+  }
 }
 .mfooter,
 .mrights,
-#slideMain {
+#slideMain,
+.modal {
   display: none;
 }
