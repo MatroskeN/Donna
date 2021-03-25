@@ -4,6 +4,7 @@ browserSync = require('browser-sync'); // Подключаем Browser Sync
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglifyjs'); // Подключаем gulp-uglifyjs (для сжатия JS)
 const autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+const del = require('del');
 
 gulp.task('less', function(){ // Создаем таск less
 return gulp.src('app/less/**/*.less') // Берем источник
@@ -39,36 +40,4 @@ gulp.task('scripts', function() {
 //auto
 gulp.task('default', gulp.parallel('less', 'browser-sync', 'watch','scripts'));
 
-// //production
-// gulp.task('clean', function() {
-// 	return del.sync('dist'); // Удаляем папку dist перед сборкой
-// });
-// gulp.task('img', function() {
-// 	return gulp.src('app/img/**/*') // Берем все изображения из app
-// 		.pipe(imagemin({ // Сжимаем их с наилучшими настройками
-// 			interlaced: true,
-// 			progressive: true,
-// 			svgoPlugins: [{removeViewBox: false}],
-// 			use: [pngquant()]
-// 		}))
-// 		.pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
-// });
 
-
-// gulp.task('build', ['clean', 'img', 'less', 'scripts'], function() {
- 
-// 	var buildCss = gulp.src([ // Переносим CSS стили в продакшен
-// 		'app/css/main.css',
-// 		])
-// 	.pipe(gulp.dest('dist/css'))
- 
-// 	var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
-// 	.pipe(gulp.dest('dist/fonts'))
- 
-// 	var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
-// 	.pipe(gulp.dest('dist/js'))
- 
-// 	var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
-// 	.pipe(gulp.dest('dist'));
- 
-// });

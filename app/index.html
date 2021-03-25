@@ -6,35 +6,1087 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/reset.css">
-    <script src="js/main.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/libs.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header>
-
+        <div class="header-content">
+            <img class="mascot" src="img/mascot.png" alt="mascot">
+            <img class="header-logo" src="img/logo.png" alt="logo" height="81px" style="margin-top: 10px;margin-right: 28px;">
+            <div class="header-menu">
+                <div class="up-menu">
+                    <button class="phone-btn">Телефоны доставки</button>
+                </div>
+                <div class="bottom-menu">
+                    <div class="header-menu-item">Меню</div>
+                    <div class="header-menu-item">О нас</div>
+                    <div class="header-menu-item">Акции</div>
+                    <div class="header-menu-item">Доставка</div>
+                    <div class="header-menu-item">Отзывы</div>
+                    <div class="header-menu-item">Контакты</div>
+                    <div class="header-menu-item">Пиццерии</div>
+                </div>
+            </div>
+            <div class="right-menu">
+                <div class="phone">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.619 10.2746L11.6652 8.32085C10.9675 7.62308 9.78126 7.90222 9.50215 8.80928C9.29282 9.4373 8.59506 9.78618 7.96707 9.6466C6.57154 9.29772 4.68758 7.48353 4.33869 6.01822C4.12936 5.39021 4.54802 4.69244 5.17601 4.48314C6.08311 4.20403 6.36221 3.01783 5.66445 2.32007L3.71071 0.366327C3.15249 -0.122109 2.31518 -0.122109 1.82674 0.366327L0.500987 1.69208C-0.824767 3.08761 0.64054 6.78576 3.92003 10.0653C7.19953 13.3448 10.8977 14.8799 12.2932 13.4843L13.619 12.1586C14.1074 11.6003 14.1074 10.763 13.619 10.2746Z" fill="white"/>
+                    </svg>
+                    <a href="tel:+78453957272">+7 (8453) 95-72-72</a>
+                </div>
+                <div class="order">
+                    <div class="myorder">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.50102 0C6.07244 0 4.08719 1.98525 4.08719 4.41384C4.08719 6.84243 6.07244 8.82768 8.50102 8.82768C10.9296 8.82768 12.9149 6.84243 12.9149 4.41384C12.9149 1.98525 10.9296 0 8.50102 0Z" fill="white"/>
+                            <path d="M16.0758 12.3548C15.9601 12.0656 15.8059 11.7958 15.6325 11.5452C14.7458 10.2346 13.3774 9.36723 11.8354 9.15521C11.6427 9.13595 11.4307 9.17447 11.2765 9.29012C10.467 9.88763 9.50325 10.196 8.50096 10.196C7.49867 10.196 6.53497 9.88763 5.72544 9.29012C5.57123 9.17447 5.35921 9.11665 5.16648 9.15521C3.62453 9.36723 2.23678 10.2346 1.36944 11.5452C1.19598 11.7958 1.04177 12.0849 0.926146 12.3548C0.868335 12.4704 0.887593 12.6053 0.945403 12.721C1.09961 12.9908 1.29234 13.2607 1.46581 13.492C1.73564 13.8582 2.02476 14.1859 2.35244 14.4942C2.62227 14.7641 2.93066 15.0146 3.23908 15.2652C4.76173 16.4024 6.59281 16.9999 8.4817 16.9999C10.3706 16.9999 12.2017 16.4024 13.7243 15.2652C14.0327 15.0339 14.3411 14.7641 14.611 14.4942C14.9193 14.1859 15.2277 13.8582 15.4976 13.492C15.6903 13.2414 15.8638 12.9908 16.018 12.721C16.1143 12.6053 16.1336 12.4704 16.0758 12.3548Z" fill="white"/>
+                        </svg>
+                        <p>Мои заказы</p>
+                    </div>
+                    <button class="order-btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.582 8.47257C10.8645 8.47257 11.1294 8.35776 11.3244 8.16385L10.1846 6.4541C9.79871 6.61285 9.52734 6.9798 9.52734 7.41788C9.52734 7.99933 10.0006 8.47257 10.582 8.47257Z" fill="#ED1A3A"/>
+                            <path d="M12.4401 9.83739L11.9061 9.03662C11.5352 9.33957 11.0764 9.52744 10.582 9.52744C9.4187 9.52744 8.47264 8.58138 8.47264 7.41806C8.47264 6.61633 8.91924 5.91499 9.58734 5.55835L8.99998 4.67725L6.46283 8.48277C7.57904 8.53606 8.47264 9.45287 8.47264 10.5821C8.47264 10.5883 8.46976 10.5939 8.46962 10.6001C9.76244 10.6736 11.0882 10.4275 12.4401 9.83739Z" fill="#ED1A3A"/>
+                            <path d="M6.36328 9.52734C6.06171 9.52734 5.79213 9.66248 5.59726 9.87314C6.18709 10.1478 6.7868 10.3413 7.39421 10.4648C7.3331 9.94098 6.90312 9.52734 6.36328 9.52734Z" fill="#ED1A3A"/>
+                            <path d="M9.00002 13.7461C9.29102 13.7461 9.52736 13.5098 9.52736 13.2188V12.6914H17.9125L15.8036 1.08984H2.23161L0.095459 12.6914H8.47267V13.2188C8.47267 13.5098 8.70901 13.7461 9.00002 13.7461ZM4.0114 10.2592L9.00002 2.77597L13.9886 10.2592C13.4739 10.4779 11.5377 11.6702 8.88672 11.6702C6.21745 11.6702 4.5349 10.4668 4.0114 10.2592Z" fill="#ED1A3A"/>
+                            <path d="M10.4919 13.7461C10.2741 14.36 9.68747 14.8008 9 14.8008C8.31253 14.8008 7.726 14.36 7.50806 13.7461H0V16.9102H18L17.9926 13.7461H10.4919Z" fill="#ED1A3A"/>
+                        </svg>
+                        <p>Корзина | 2</p>
+                    </button>
+                </div>
+                <svg class="burger" id="burger" width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="24.5" y1="1.5" x2="1.5" y2="1.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="24.5" y1="8.5" x2="1.5" y2="8.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="24.5" y1="15.5" x2="1.5" y2="15.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div class="burger-menu" id="closed-burger"></div>
+            </div>
+        </div>
     </header>
     <div class="banner">
 
     </div>
     <div class="content">
+
         <div class="menu">
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
-            <div class="menu-item"></div>
+            
+            <button class="menu-item">
+                <div class="item-title">Пицца</div>
+                <img src="img/pizza.png" alt="pizza">
+            </button>
+            <button class="menu-item">
+                <div class="item-title">Салаты</div>
+                <img src="img/salad.png" alt="salad">
+            </button>
+            <button class="menu-item">
+                <div class="item-title">Горячие блюда</div>
+                <img src="img/hot.png" alt="hot">
+            </button>
+            <button class="menu-item">
+                <div class="item-title">Роллы</div>
+                <img src="img/roll.png" alt="roll">
+            </button>
+            <button class="menu-item">
+                <div class="item-title">Суши</div>
+                <img src="img/sushi.png" alt="sushi">
+            </button>
+            <button class="menu-item">
+                <div class="item-title">Сеты</div>
+                <img src="img/set.png" alt="set">
+            </button>
+            <button class="menu-item">
+                <div class="item-title">Соусы</div>
+                <img src="img/sauce.png" alt="sauce">
+            </button>
+            <button class="menu-item">
+                <div class="item-title">Десерты</div>
+                <img src="img/desert.png" alt="desert">
+            </button>
+            <button class="menu-item">
+                <div class="item-title">Напитки</div>
+                <img src="img/bev.png" alt="bev">
+            </button>
+            <button class="menu-item">
+                <div class="item-title">Комбо</div>
+                <img src="img/combo.png" alt="combo">
+            </button>
+            <div class="menu-item item-banner"></div>
+        </div>
+
+        <h1 class="pizza-head">Пицца</h1>
+        <div class="swiper-container swiper-catalog" id="slideMain">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slider">
+                <button class="slider-btn">Пицца</button>
+              </div> 
+              <div class="swiper-slide slider">
+                <button class="slider-btn">Пицца</button>
+              </div> 
+              <div class="swiper-slide slider">
+                <button class="slider-btn">Пицца</button>
+              </div> 
+              <div class="swiper-slide slider">
+                <button class="slider-btn">Пицца</button>
+              </div> 
+              <div class="swiper-slide slider">
+                <button class="slider-btn">Пицца</button>
+              </div> 
+              <div class="swiper-slide slider">
+                <button class="slider-btn">Пицца</button>
+              </div> 
+              <div class="swiper-slide slider">
+                <button class="slider-btn">Пицца</button>
+              </div> 
+              <div class="swiper-slide slider">
+                <button class="slider-btn">Пицца</button>
+              </div> 
+              <div class="swiper-slide slider">
+                <button class="slider-btn">Пицца</button>
+              </div> 
+            </div>
+          </div>
+        <div class="catalog">
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-item">
+                <img src="img/pic.png" alt="pizza">
+                <div class="reciepe">
+                    <div class="title-pizza">
+                        Донна
+                    </div>
+                    <div class="compos">
+                        Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                    </div>
+                    <div class="choose">
+                        <div class="size">
+                            <button class="big">
+                                35 см
+                            </button>
+                            <button class="small">
+                                23 см
+                            </button>
+                        </div>
+                        <div class="price"> 540 ₽ </div>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="quantity">
+                            <button class="count">-</button>
+                            <p class="number">1</p>
+                            <button class="count">+</button>
+                        </div>
+                        <div class="mob-price"> От 190 ₽ </div>
+                        <button class="add">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-block">
+            <div class="delivery">
+                <h2 class="delivery-title">Доставка пиццы в Саратове</h2>
+                <div class="delivery-text">
+                    <p>
+                        Сделать заказ на официальном сайте «Донна Пицца» и получить пиццу или другие блюда за 1 часа — легко! Заказ оформляется в три клика. В течение часа ожидайте курьера с Вашим блюдом!
+                        1) Выберите блюдо, добавьте в корзину;
+                        2) В разделе корзина, заполните форму: имя, контакты, нужна сдача или нет, адрес, комментарии к заказу;
+                        3) Оформить заказ!
+                    </p>
+                    <p>
+                        Чем отличается «Донна Пицца» от других?
+                        Характерная особенность - это наша пицца! Особый вкус, вкусное тесто, начинка с изысканными пряными или сливочными нотками - её полюбили! Ведь не даром «Донна Пицца» стала широкой сетью пиццерий по Саратову, Энгельсу и Балаково.
+                        Прекрасный вкус блюд и обслуживание в «Донна Пицца» идеально сочетается с ценовой политикой заведения. Вы сможете сытно покушать по приемлемой цене!
+                    </p>
+                </div>
+                <button class="more-btn">
+                    Подробнее
+                </button>
+            </div>
+            <div class="map-block">
+                <div class="butts">
+                    <button class="choose">Наши пиццерии</button>
+                    <button class="unchoose">Галерея</button>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423283.43554989767!2d-118.69191546801642!3d34.02073049790668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z0JvQvtGBLdCQ0L3QtNC20LXQu9C10YEsINCa0LDQu9C40YTQvtGA0L3QuNGPLCDQodCo0JA!5e0!3m2!1sru!2sru!4v1616583423588!5m2!1sru!2sru" width="100%" height="376" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
-
+        <div class="footer-content">
+            <div class="foot-logo">
+                <img src="img/footer-logo.png" alt="logo">
+                <div class="policy">
+                    <a href="">Политика конфиденциальности</a>
+                </div>
+            </div>
+            <div class="foot-catalog">
+                <a href="" class="foot-item">Меню</a>
+                <a href="" class="foot-item">Пицца</a>
+                <a href="" class="foot-item">Горячие блюда</a>
+                <a href="" class="foot-item">О нас</a>
+                <a href="" class="foot-item">Роллы</a>
+                <a href="" class="foot-item">Сеты</a>
+                <a href="" class="foot-item">Акции</a>
+                <a href="" class="foot-item">Соус</a>
+                <a href="" class="foot-item">Десерт</a>
+                <a href="" class="foot-item">Доставка</a>
+                <a href="" class="foot-item">Комбо</a>
+                <a href="" class="foot-item">Напитки</a>
+                <a href="" class="foot-item">Салаты</a>
+                <a href="" class="foot-item">Пиццерии</a>
+                <a href="" class="foot-item">Суши</a>
+                <a href="" class="foot-item">Контакты</a>
+            </div>
+            <div class="mfooter">
+                <div class="mob-logo">
+                    <img src="img/mfooter-logo.png" alt="mlogo">
+                </div>
+                <div class="mob-catalog">
+                    <a href="" class="mfcatalog-item">Меню</a>
+                    <a href="" class="mfcatalog-item">О нас</a>
+                    <a href="" class="mfcatalog-item">Акции</a>
+                    <a href="" class="mfcatalog-item">Доставка</a>
+                    <a href="" class="mfcatalog-item">Контакты</a>
+                    <a href="" class="mfcatalog-item">Пиццерии</a>
+                </div>
+            </div>
+            <div class="foot-links">
+                <div class="socials">
+                    <a href="">
+                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 0C7.83535 0 0 7.83499 0 17.5C0 27.165 7.83535 35 17.5 35C27.1647 35 35 27.165 35 17.5C35 7.83499 27.1647 0 17.5 0ZM26.3769 19.3927C27.1926 20.1894 28.0555 20.9391 28.7877 21.8182C29.1121 22.207 29.4179 22.6091 29.6506 23.0613C29.9829 23.7062 29.6829 24.4134 29.1057 24.4517L25.5205 24.4509C24.5945 24.5276 23.8576 24.1541 23.2364 23.5211C22.7405 23.0166 22.2804 22.4777 21.8028 21.956C21.6076 21.7419 21.4021 21.5403 21.1572 21.3817C20.6684 21.0637 20.2438 21.1611 19.9638 21.6717C19.6784 22.1913 19.6132 22.767 19.586 23.3453C19.547 24.1906 19.2921 24.4116 18.4438 24.4513C16.6314 24.5362 14.9116 24.2612 13.3132 23.3474C11.9032 22.5414 10.8119 21.4039 9.86087 20.116C8.009 17.6053 6.59074 14.8497 5.31642 12.0149C5.02962 11.3765 5.23944 11.0349 5.94373 11.0217C7.11386 10.9991 8.28399 11.002 9.45412 11.0206C9.93033 11.0281 10.2454 11.3006 10.4284 11.75C11.0607 13.3057 11.8359 14.7859 12.8073 16.1587C13.0662 16.5243 13.3304 16.8888 13.7068 17.147C14.1221 17.432 14.4386 17.3378 14.6345 16.8741C14.7598 16.5794 14.8139 16.2643 14.8411 15.9485C14.9342 14.8669 14.9453 13.7855 14.7841 12.7081C14.6839 12.0339 14.3047 11.5985 13.6326 11.471C13.2903 11.4062 13.3405 11.2795 13.507 11.084C13.7959 10.746 14.0666 10.5369 14.6076 10.5369L18.6583 10.5362C19.2967 10.6615 19.4399 10.9479 19.5266 11.591L19.5302 16.0925C19.5227 16.3413 19.6551 17.0789 20.102 17.2418C20.4601 17.36 20.6964 17.0728 20.9105 16.8462C21.8819 15.8153 22.574 14.5987 23.1938 13.3394C23.4674 12.784 23.7033 12.2094 23.9325 11.6336C24.1029 11.2079 24.3679 10.9984 24.8484 11.0056L28.7491 11.0102C28.864 11.0102 28.9807 11.0113 29.0946 11.031C29.752 11.1434 29.9321 11.4263 29.7287 12.0676C29.4086 13.0751 28.7866 13.9144 28.1787 14.7559C27.527 15.6567 26.832 16.5261 26.1868 17.4309C25.5939 18.258 25.6408 18.6744 26.3769 19.3927Z" fill="white"/>
+                    </svg>
+                    </a>
+                    <a href="">
+                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.8496 17.5C20.8496 19.35 19.35 20.8496 17.5 20.8496C15.65 20.8496 14.1504 19.35 14.1504 17.5C14.1504 15.65 15.65 14.1504 17.5 14.1504C19.35 14.1504 20.8496 15.65 20.8496 17.5Z" fill="white"/>
+                        <path d="M25.3334 11.5736C25.1724 11.1373 24.9155 10.7424 24.5817 10.4182C24.2575 10.0844 23.8628 9.82753 23.4263 9.66651C23.0722 9.52899 22.5403 9.3653 21.5605 9.32071C20.5007 9.27238 20.1829 9.26196 17.4998 9.26196C14.8164 9.26196 14.4987 9.27211 13.4391 9.32044C12.4594 9.3653 11.9272 9.52899 11.5734 9.66651C11.1368 9.82753 10.7419 10.0844 10.4179 10.4182C10.0842 10.7424 9.82728 11.137 9.66599 11.5736C9.52847 11.9277 9.36478 12.4599 9.32019 13.4396C9.27186 14.4992 9.26144 14.817 9.26144 17.5003C9.26144 20.1834 9.27186 20.5012 9.32019 21.561C9.36478 22.5408 9.52847 23.0727 9.66599 23.4268C9.82728 23.8634 10.0839 24.258 10.4177 24.5822C10.7419 24.916 11.1365 25.1729 11.5731 25.3339C11.9272 25.4717 12.4594 25.6354 13.4391 25.68C14.4987 25.7283 14.8162 25.7384 17.4995 25.7384C20.1832 25.7384 20.501 25.7283 21.5603 25.68C22.54 25.6354 23.0722 25.4717 23.4263 25.3339C24.3026 24.9958 24.9953 24.3032 25.3334 23.4268C25.4709 23.0727 25.6346 22.5408 25.6794 21.561C25.7278 20.5012 25.7379 20.1834 25.7379 17.5003C25.7379 14.817 25.7278 14.4992 25.6794 13.4396C25.6348 12.4599 25.4712 11.9277 25.3334 11.5736ZM17.4998 22.6601C14.6498 22.6601 12.3395 20.3501 12.3395 17.5001C12.3395 14.6501 14.6498 12.34 17.4998 12.34C20.3495 12.34 22.6599 14.6501 22.6599 17.5001C22.6599 20.3501 20.3495 22.6601 17.4998 22.6601ZM22.8639 13.3419C22.1979 13.3419 21.658 12.802 21.658 12.136C21.658 11.47 22.1979 10.9301 22.8639 10.9301C23.5299 10.9301 24.0698 11.47 24.0698 12.136C24.0695 12.802 23.5299 13.3419 22.8639 13.3419Z" fill="white"/>
+                        <path d="M17.5 0C7.83649 0 0 7.83649 0 17.5C0 27.1635 7.83649 35 17.5 35C27.1635 35 35 27.1635 35 17.5C35 7.83649 27.1635 0 17.5 0ZM27.4882 21.643C27.4396 22.7127 27.2695 23.443 27.0212 24.0823C26.4991 25.4321 25.4321 26.4991 24.0823 27.0212C23.4433 27.2695 22.7127 27.4393 21.6432 27.4882C20.5716 27.5371 20.2293 27.5488 17.5003 27.5488C14.771 27.5488 14.4289 27.5371 13.357 27.4882C12.2876 27.4393 11.557 27.2695 10.918 27.0212C10.2472 26.7688 9.64001 26.3734 9.13799 25.862C8.6269 25.3603 8.23143 24.7528 7.97909 24.0823C7.73075 23.4433 7.56065 22.7127 7.51205 21.6432C7.46265 20.5714 7.45117 20.229 7.45117 17.5C7.45117 14.771 7.46265 14.4286 7.51179 13.357C7.56039 12.2873 7.73022 11.557 7.97855 10.9177C8.2309 10.2472 8.62663 9.63974 9.13799 9.13799C9.63974 8.62663 10.2472 8.23116 10.9177 7.97882C11.557 7.73048 12.2873 7.56065 13.357 7.51179C14.4286 7.46292 14.771 7.45117 17.5 7.45117C20.229 7.45117 20.5714 7.46292 21.643 7.51205C22.7127 7.56065 23.443 7.73048 24.0823 7.97855C24.7528 8.2309 25.3603 8.62663 25.8623 9.13799C26.3734 9.64001 26.7691 10.2472 27.0212 10.9177C27.2698 11.557 27.4396 12.2873 27.4885 13.357C27.5373 14.4286 27.5488 14.771 27.5488 17.5C27.5488 20.229 27.5373 20.5714 27.4882 21.643Z" fill="white"/>
+                    </svg>
+                    </a>
+                </div>
+                <div class="pizza-logo">
+                    <img src="img/pizza.svg" alt="pizza">
+                </div>
+                <div class="madein">
+                    <p>Сделано в <a href="">Сайт-Креатив</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="mrights">
+            <a href="">Политика конфиденциальности</a>
+            <p>Сделано в <a href=""> Сайт-Креатив</a></p>
+        </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
