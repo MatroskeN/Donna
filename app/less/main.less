@@ -198,18 +198,12 @@ body{
                 }
 
                 &:hover{
-                    background: #ED1A3A;
                     .item-title{
                         color: #FFFFFF;
                     }
                 }
-
-                img{
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                }
                 .item-title{
+                    z-index: 5;
                     position: absolute;
                     top: 15px;
                     left: 17px;
@@ -225,8 +219,79 @@ body{
 
                     color: #3A3838;
                 }
-            }
 
+                
+            }
+            .pizza{
+                background: url(../img/pizza_normal.png);
+
+                &:hover{
+                    background: url(../img/pizza_hover.png);
+                }
+            }
+            .salad{
+                background: url(../img/salati_normal.png);
+
+                &:hover{
+                    background: url(../img/salati_hover.png);
+                }
+            }
+            .hot{
+                background: url(../img/gorachee_normal.png);
+
+                &:hover{
+                    background: url(../img/gorachee_hover.png);
+                }
+            }
+            .roll{
+                background: url(../img/rolls_normal.png);
+
+                &:hover{
+                    background: url(../img/rolls_hover.png);
+                }
+            }
+            .sushi{
+                background: url(../img/sushi.png);
+
+                &:hover{
+                    background: url(../img/sushi_hover.png);
+                }
+            }
+            .set{
+                background: url(../img/seti_normal.png);
+
+                &:hover{
+                    background: url(../img/seti_hover.png);
+                }
+            }
+            .sauce{
+                background: url(../img/sous_normal.png);
+
+                &:hover{
+                    background: url(../img/sous_hover.png);
+                }
+            }
+            .desert{
+                background: url(../img/deserti_normal.png);
+
+                &:hover{
+                    background: url(../img/deserti_hover.png);
+                }
+            }
+            .beverage{
+                background: url(../img/napitki_normal.png);
+
+                &:hover{
+                    background: url(../img/napitki_hover.png);
+                }
+            }
+            .combo{
+                background: url(../img/kombo_normal.png);
+
+                &:hover{
+                    background: url(../img/kombo_hover.png);
+                }
+            }
             .item-banner{
                 width: 400px;
                 margin-right: 0;
@@ -946,7 +1011,7 @@ body{
     }
 }
 
-    .mfooter,.mrights,#slideMain,.modal{
+    .mfooter,.mrights,#slideMain,.modal,.burger{
         display: none;
     }
 

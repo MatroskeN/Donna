@@ -218,18 +218,11 @@ body .content .menu .menu-item {
 body .content .menu .menu-item:nth-child(6n+6) {
   margin-right: 0;
 }
-body .content .menu .menu-item:hover {
-  background: #ED1A3A;
-}
 body .content .menu .menu-item:hover .item-title {
   color: #FFFFFF;
 }
-body .content .menu .menu-item img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
 body .content .menu .menu-item .item-title {
+  z-index: 5;
   position: absolute;
   top: 15px;
   left: 17px;
@@ -248,6 +241,66 @@ body .content .menu .menu-item .item-title {
       -ms-flex-align: center;
           align-items: center;
   color: #3A3838;
+}
+body .content .menu .pizza {
+  background: url(../img/pizza_normal.png);
+}
+body .content .menu .pizza:hover {
+  background: url(../img/pizza_hover.png);
+}
+body .content .menu .salad {
+  background: url(../img/salati_normal.png);
+}
+body .content .menu .salad:hover {
+  background: url(../img/salati_hover.png);
+}
+body .content .menu .hot {
+  background: url(../img/gorachee_normal.png);
+}
+body .content .menu .hot:hover {
+  background: url(../img/gorachee_hover.png);
+}
+body .content .menu .roll {
+  background: url(../img/rolls_normal.png);
+}
+body .content .menu .roll:hover {
+  background: url(../img/rolls_hover.png);
+}
+body .content .menu .sushi {
+  background: url(../img/sushi.png);
+}
+body .content .menu .sushi:hover {
+  background: url(../img/sushi_hover.png);
+}
+body .content .menu .set {
+  background: url(../img/seti_normal.png);
+}
+body .content .menu .set:hover {
+  background: url(../img/seti_hover.png);
+}
+body .content .menu .sauce {
+  background: url(../img/sous_normal.png);
+}
+body .content .menu .sauce:hover {
+  background: url(../img/sous_hover.png);
+}
+body .content .menu .desert {
+  background: url(../img/deserti_normal.png);
+}
+body .content .menu .desert:hover {
+  background: url(../img/deserti_hover.png);
+}
+body .content .menu .beverage {
+  background: url(../img/napitki_normal.png);
+}
+body .content .menu .beverage:hover {
+  background: url(../img/napitki_hover.png);
+}
+body .content .menu .combo {
+  background: url(../img/kombo_normal.png);
+}
+body .content .menu .combo:hover {
+  background: url(../img/kombo_hover.png);
 }
 body .content .menu .item-banner {
   width: 400px;
@@ -994,6 +1047,7 @@ body footer .footer-content .foot-links .madein a:hover {
 .mfooter,
 .mrights,
 #slideMain,
-.modal {
+.modal,
+.burger {
   display: none;
 }
