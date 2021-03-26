@@ -108,8 +108,79 @@
             </div>
         </div>
     </div>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="back" id="back"> < Назад </button>
+        </div>
+        <div class="popup-item">
+            <img src="img/hit.svg" alt="hit" class="sales">
+            <img src="img/pic.png" alt="pizza" class="pizza-pic">
+            <div class="reciepe">
+                <div class="title-pizza">
+                    Донна
+                </div>
+                <div class="compos">
+                    Соус Донна, карбонат, салями, помидоры, перец болгарский, шампиньоны, маслины, сыр, зелень.
+                </div>
+                <div class="choose">
+                    <div class="size">
+                        <button class="big">
+                            35 см
+                        </button>
+                        <button class="small">
+                            23 см
+                        </button>
+                    </div>
+                    <div class="price"> 540 ₽ </div>
+                </div>
+                <div class="card-bottom">
+                    <div class="quantity">
+                        <button class="count">-</button>
+                        <p class="number">1</p>
+                        <button class="count">+</button>
+                    </div>
+                    <div class="mob-price"> От 190 ₽ </div>
+                    <button class="add">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="banner">
 
+    </div>
+    <div class="swiper-container swiper-catalog" id="slideMain">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slider">
+            <button class="slider-btn">Пицца</button>
+          </div> 
+          <div class="swiper-slide slider">
+            <button class="slider-btn">Салаты</button>
+          </div> 
+          <div class="swiper-slide slider">
+            <button class="slider-btn">Горячие блюда</button>
+          </div> 
+          <div class="swiper-slide slider">
+            <button class="slider-btn">Роллы</button>
+          </div> 
+          <div class="swiper-slide slider">
+            <button class="slider-btn">Суши</button>
+          </div> 
+          <div class="swiper-slide slider">
+            <button class="slider-btn">Сеты</button>
+          </div> 
+          <div class="swiper-slide slider">
+            <button class="slider-btn">Соусы</button>
+          </div> 
+          <div class="swiper-slide slider">
+            <button class="slider-btn">Десерты</button>
+          </div> 
+          <div class="swiper-slide slider">
+            <button class="slider-btn">Напитки</button>
+          </div>
+          <div class="swiper-slide slider">
+            <button class="slider-btn">Комбо</button>
+          </div> 
+        </div>
     </div>
     <div class="content">
 
@@ -152,37 +223,6 @@
         <h1 class="pizza-head">Пицца <svg width="58" height="4" viewBox="0 0 58 4" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="58" height="4" fill="#FFB900"/>
             </svg></h1>
-        <div class="swiper-container swiper-catalog" id="slideMain">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide slider">
-                <button class="slider-btn">Пицца</button>
-              </div> 
-              <div class="swiper-slide slider">
-                <button class="slider-btn">Пицца</button>
-              </div> 
-              <div class="swiper-slide slider">
-                <button class="slider-btn">Пицца</button>
-              </div> 
-              <div class="swiper-slide slider">
-                <button class="slider-btn">Пицца</button>
-              </div> 
-              <div class="swiper-slide slider">
-                <button class="slider-btn">Пицца</button>
-              </div> 
-              <div class="swiper-slide slider">
-                <button class="slider-btn">Пицца</button>
-              </div> 
-              <div class="swiper-slide slider">
-                <button class="slider-btn">Пицца</button>
-              </div> 
-              <div class="swiper-slide slider">
-                <button class="slider-btn">Пицца</button>
-              </div> 
-              <div class="swiper-slide slider">
-                <button class="slider-btn">Пицца</button>
-              </div> 
-            </div>
-          </div>
         <div class="catalog">
             <div class="catalog-item">
                 <img src="img/hit.svg" alt="hit" class="sale">
@@ -213,11 +253,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
-                <img src="img/hot.svg" alt="hot" class="sale">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -245,11 +286,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
-                <img src="img/new.svg" alt="new" class="sale">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -277,11 +319,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
-                <img src="img/thin.svg" alt="thin" class="sale">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -309,11 +352,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
-                <img src="img/vegan.svg" alt="vegan" class="sale">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -341,10 +385,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -372,10 +418,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -403,10 +451,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -434,10 +484,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -465,10 +517,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -496,10 +550,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -527,10 +583,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -558,10 +616,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -589,10 +649,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -620,10 +682,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -651,10 +715,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -682,10 +748,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -713,10 +781,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -744,10 +814,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -775,10 +847,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -806,10 +880,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -837,10 +913,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -868,10 +946,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -899,10 +979,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -930,10 +1012,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -961,10 +1045,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -992,10 +1078,12 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
             <div class="catalog-item">
+                <img src="img/hit.svg" alt="hit" class="sale">
                 <img src="img/pic.png" alt="pizza" class="pizza-pic">
                 <div class="reciepe">
                     <div class="title-pizza">
@@ -1023,6 +1111,7 @@
                         </div>
                         <div class="mob-price"> От 190 ₽ </div>
                         <button class="add">В корзину</button>
+                        <button class="addp" id="addp">Выбрать</button>
                     </div>
                 </div>
             </div>
@@ -1126,6 +1215,16 @@
             <p>Сделано в <a href=""> Сайт-Креатив</a></p>
         </div>
     </footer>
+    <button class="card-swim">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.582 8.47257C10.8645 8.47257 11.1294 8.35776 11.3244 8.16385L10.1846 6.4541C9.79871 6.61285 9.52734 6.9798 9.52734 7.41788C9.52734 7.99933 10.0006 8.47257 10.582 8.47257Z" fill="white"/>
+            <path d="M12.4401 9.83739L11.9062 9.03662C11.5353 9.33957 11.0765 9.52744 10.5821 9.52744C9.41876 9.52744 8.4727 8.58138 8.4727 7.41806C8.4727 6.61633 8.9193 5.91499 9.5874 5.55835L9.00005 4.67725L6.46289 8.48277C7.5791 8.53606 8.4727 9.45287 8.4727 10.5821C8.4727 10.5883 8.46982 10.5939 8.46968 10.6001C9.7625 10.6736 11.0883 10.4275 12.4401 9.83739Z" fill="white"/>
+            <path d="M6.36331 9.52734C6.06174 9.52734 5.79216 9.66248 5.59729 9.87314C6.18712 10.1478 6.78683 10.3413 7.39424 10.4648C7.33313 9.94098 6.90315 9.52734 6.36331 9.52734Z" fill="white"/>
+            <path d="M9.00002 13.7461C9.29102 13.7461 9.52736 13.5098 9.52736 13.2188V12.6914H17.9125L15.8036 1.08984H2.23161L0.095459 12.6914H8.47267V13.2188C8.47267 13.5098 8.70901 13.7461 9.00002 13.7461ZM4.0114 10.2592L9.00002 2.77597L13.9886 10.2592C13.4739 10.4779 11.5377 11.6702 8.88672 11.6702C6.21745 11.6702 4.5349 10.4668 4.0114 10.2592Z" fill="white"/>
+            <path d="M10.4919 13.7461C10.2741 14.36 9.68747 14.8008 9 14.8008C8.31253 14.8008 7.726 14.36 7.50806 13.7461H0V16.9102H18L17.9926 13.7461H10.4919Z" fill="white"/>
+        </svg>
+        <p>456 ₽</p>
+    </button>
     <script src="js/main.js"></script>
 </body>
 </html>

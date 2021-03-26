@@ -94,7 +94,7 @@ body{
                 display: flex;
                 flex-direction: row;
                 height: 100%;
-                margin-left: 60px;
+                margin-left: 23px;
                 .phone{
                     width: 179px;
                     position: relative;
@@ -442,9 +442,12 @@ body{
                         .count{
                             width: 30px;
                             height: 30px;
-                            background: #EDEDED;
+                            background:url(../img/circle.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
                             border: none;
-                            border-radius: 30px;
+                            
 
                             &:nth-child(1n){
                                 margin-right: 14px;
@@ -461,6 +464,27 @@ body{
                         }
 
                         .add{
+                            width: 111px;
+                            height: 30px;
+                            margin-left: 30px;
+
+                            background: #ED1A3A;
+                            border-radius: 23px;
+                            border: none;
+                            font-family: PT Sans;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 18px;
+
+                            color: #FFFFFF;
+
+                            &:hover{
+                                background: #D90F2E;
+                            }
+                        }
+
+                        .addp{
+                            display: none;
                             width: 111px;
                             height: 30px;
                             margin-left: 30px;
@@ -728,6 +752,9 @@ body{
     display: none;
 }
 @media(max-width:1149px){
+    .sale{
+        display: none;
+    }
     header{
         height: 57px !important;
        .header-content{
@@ -754,6 +781,7 @@ body{
             .phone-btn{
                 width: 137px !important;
                 font-size: 14px !important;
+                line-height: 16px !important;
             }
         }
         .bottom-menu{
@@ -761,6 +789,52 @@ body{
         }
     }
     }
+    #slideMain{
+        height: 30px;
+        display: block !important;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      .swiper-wrapper{
+          display: flex;
+          flex-direction: row;
+          margin-left: 10px;
+          
+      }
+      .slider{
+        background: transparent;
+        height: 30px;
+        width: auto !important;
+        margin-right: 13px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .slider-btn{
+            width: auto;
+            height: 30px;
+            min-width: 80px;
+            background: #EDEDED;
+            border-radius: 23px;
+            border: none;
+            font-family: PT Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 21px;
+            /* identical to box height */
+
+            display: block;
+            align-items: center;
+
+            color: #3A3838;
+
+            &:hover{
+                background: #ED1A3A;
+                color: #fff;
+            }
+        }
+      }
     .content{
         max-width: 320px !important;
         .menu{
@@ -769,55 +843,19 @@ body{
         .pizza-head{
             display: none !important;
         }
-        #slideMain{
-            height: 30px;
-            display: block !important;
-            margin-bottom: 20px;
-          }
-          .swiper-wrapper{
-              display: flex;
-              flex-direction: row;
-              
-          }
-          .slider{
-            background: transparent;
-            height: 30px;
-            width: 90px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            .slider-btn{
-                width: 80px;
-                height: 30px;
-                background: #EDEDED;
-                border-radius: 23px;
-                border: none;
-                font-family: PT Sans;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 21px;
-                /* identical to box height */
-
-                display: block;
-                align-items: center;
-
-                color: #3A3838;
-
-                &:hover{
-                    background: #ED1A3A;
-                    color: #fff;
-                }
-            }
-          }
+        
         .catalog{
             .catalog-item{
                 position: relative;
                 flex-direction: row !important;
                 border-bottom: 1px solid #C4C4C4;
                 border-radius: unset !important;
-                height: 135px !important;
+                height: 150px !important;
+                width: 100% !important;
+                padding-top:20px;
+                margin-bottom: unset !important;
+
+                
                 .pizza-pic{
                     width: 109px !important;
                     height: 97px !important;
@@ -839,7 +877,14 @@ body{
                         padding: unset !important;
                         margin-top: 8px !important;
                         .add{
+                            display: none;
                             margin-left: 7px !important;
+                            font-size: 15px !important;
+                        }
+                        .addp{
+                            display: block !important;
+                            margin-left: 7px !important;
+                            font-size: 15px !important;
                         }
                         .quantity{
                             display: none !important;
@@ -892,6 +937,12 @@ body{
                 .map{
                     width: 100% !important;
                 }
+                .butts{
+                    .choose{
+                        font-size: 14px !important;
+                        line-height: 16px   !important;
+                    }
+                }
             }
         }
     }
@@ -905,6 +956,9 @@ body{
             .foot-links{
                 .madein{
                     display: none !important;
+                }
+                .pizza-logo{
+                    margin-top: 48px;
                 }
             }
             .mfooter{
@@ -974,10 +1028,11 @@ body{
     }
 
     .modal{
-        height: 100vh;
+        display: none;
+        height: 100%;
         width: 100%;
         background: #FFFFFF;
-        position: absolute;
+        position: fixed;
         top: 0;
         z-index: 15;
 
@@ -1032,9 +1087,241 @@ body{
             }
         }
     }
-}
 
-    .mfooter,.mrights,#slideMain,.modal,.burger{
+    .popup{
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #FFFFFF;
+        z-index: 12;
+
+        .popup-header{
+            width: 100%;
+            height: 35px;
+            position: fixed;
+            top: 0;
+            background: #ededed;
+           .back{
+            font-family: PT Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 19px;
+
+            color: #6C6C6C;
+           }
+
+            .back{
+                border: none;
+                background: transparent;
+                padding-top: 5px;
+                padding-left: 15px;
+            }
+        }
+
+        .popup-item{
+                
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 295px;
+                height: 493px;
+                background: #FFFFFF;
+                border-radius: 15px;
+                margin: 0 auto;
+                margin-top: 15%;
+                transition: all 0.4s;
+
+                &:nth-child(4n+4){
+                    margin-right: 0;
+                }
+                .sales{
+                    position: absolute;
+                    top: 16px;
+                    right: 11px;
+                    width: 42px;
+                    height: 18px;
+                }
+                .pizza-pic{
+                    margin: 0 auto;
+                    width: 294px;
+                    height: 257px;
+                    margin-top: 41px;
+                    margin-bottom: 9px;
+                }
+                .reciepe{
+                    padding-left: 21px;
+                    .title-pizza{
+                        font-family: PT Sans;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 18px;
+                        line-height: 23px;
+                        margin-bottom: 7px;
+                        color: #3A3838;
+                    }
+                    .compos{
+                        font-family: PT Sans;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: #3A3838;
+                        width: 252px;
+                        margin-bottom: 23px;
+                    }
+                    .choose{
+                        display: flex;
+                        margin-top: 10px;
+                        .size{
+                            button{
+                                width: 65px;
+                                height: 30px;
+                                border: none;
+
+                                background: #EDEDED;
+                                border-radius: 23px;
+
+                                font-family: PT Sans;
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 14px;
+                                line-height: 16px;
+                                /* identical to box height */
+
+                                color: #3A3838;
+                                transition: all 0.4s;
+                                &:hover{
+                                    color: #FFFFFF;
+                                    background: #ED1A3A;
+                                    transition: all 0.4s;
+                                }
+                            }
+                        }
+                        .price{
+                            margin-left: 64px;
+                            font-family: PT Sans;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 20px;
+                            line-height: 26px;
+                            /* identical to box height */
+
+                            text-transform: uppercase;
+
+                            color: #3A3838;
+                        }
+                    }
+                    .card-bottom{
+                        display: flex;
+                        flex-direction: row;
+                        padding-top: 21px;
+                        margin-top: 18px;
+                        border-top: 1px solid #E5E5E5;
+                        .quantity{
+                        display: flex;
+                        flex-direction: row;
+                        font-family: PT Sans;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 23px;
+
+                        color: #3A3838;
+
+                        .count{
+                            width: 30px;
+                            height: 30px;
+                            background:url(../img/circle.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            border: none;
+                            
+
+                            &:nth-child(1n){
+                                margin-right: 14px;
+                            }
+
+                            &:hover{
+                                background: #C4C4C4;
+                            }
+                        }
+                        .number{
+                            margin-right: 14px;
+                            padding-top: 5px;
+                        }
+                        }
+
+                        .add{
+                            width: 111px;
+                            height: 30px;
+                            margin-left: 30px;
+
+                            background: #ED1A3A;
+                            border-radius: 23px;
+                            border: none;
+                            font-family: PT Sans;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 15px;
+
+                            color: #FFFFFF;
+
+                            &:hover{
+                                background: #D90F2E;
+                            }
+                        }
+                    }
+                }
+            
+        }
+    }
+
+    .card-swim{
+        display: flex !important;
+        position: fixed;
+        bottom: 15px;
+        left: 19px;
+        width: 90px;
+        height: 35px;
+        border: none;
+        background: #ED1A3A;
+        box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        font-family: PT Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height */
+
+
+        color: #FFFFFF;
+        padding-bottom: 4px;
+        svg{
+            padding-right: 4px;
+            padding-top: 7px;
+            margin-left: 6px;
+        }
+        p{
+            padding-top: 8px;
+        }
+    }
+}
+@media(max-width:425px){
+    .banner{
+        height: 171px !important;
+        background: url(../img/mbanner.png) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        margin-bottom: 15px !important;
+    }
+}
+    .mfooter,.mrights,#slideMain,.modal,.burger, .card-swim,.popup{
         display: none;
     }
 
