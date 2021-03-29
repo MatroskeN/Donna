@@ -326,6 +326,9 @@ body{
             flex-wrap: wrap;
             margin:0 auto;
             margin-bottom: 72px;
+            .hover-item:hover{
+                box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.15);
+            }
             .catalog-item{
                 position: relative;
                 display: flex;
@@ -338,9 +341,6 @@ body{
                 margin-right: 20px;
 
                 transition: all 0.4s;
-                &:hover{
-                    box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.15);
-                }
 
                 &:nth-child(4n+4){
                     margin-right: 0;
@@ -401,11 +401,11 @@ body{
 
                                 color: #3A3838;
                                 transition: all 0.4s;
-                                &:hover{
-                                    color: #FFFFFF;
-                                    background: #ED1A3A;
-                                    transition: all 0.4s;
-                                }
+                            }
+
+                            .actual{
+                                background: #ED1A3A;
+                                color: #FFFFFF;
                             }
                         }
                         .price{
@@ -427,7 +427,7 @@ body{
                         flex-direction: row;
                         padding-top: 21px;
                         margin-top: 18px;
-                        border-top: 1px solid #E5E5E5;
+                        border-top: 1px solid #dd9090;
                         .quantity{
                         display: flex;
                         flex-direction: row;
@@ -440,8 +440,8 @@ body{
                         color: #3A3838;
 
                         .count{
-                            width: auto;
-                            height: auto;
+                            width: 25px !important;
+                            height: auto !important;
                             background:url(../img/circle.svg);
                             background-position: center;
                             background-repeat: no-repeat;
@@ -488,10 +488,11 @@ body{
 
                         .addp{
                             display: none;
-                            width: 111px;
+                            width: auto;
                             height: 30px;
                             margin-left: 30px;
-
+                            padding-left: 15px;
+                            padding-right: 15px;
                             background: #ED1A3A;
                             border-radius: 23px;
                             border: none;
@@ -633,7 +634,7 @@ body{
             max-width: 1250px;
             margin: 0 auto;
             display: flex;
-            padding-top: 39px;
+            padding-top: 17px;
             .foot-logo{
                 display: flex;
                 flex-direction: column;
@@ -782,9 +783,9 @@ body{
             margin-top: 13px !important;
 
             .phone-btn{
+                height: auto !important;
                 width: auto !important;
-                padding-left: 10px;
-                padding-right: 10px;
+                padding: 5px;
                 font-size: 14px !important;
                 line-height: 16px !important;
             }
@@ -805,6 +806,12 @@ body{
           flex-direction: row;
           margin-left: 10px;
           
+      }
+      .swiper-slide-active{
+          .slider-btn{
+            background: #ED1A3A !important;
+            color: #fff !important;
+          }
       }
       .slider{
         background: transparent;
@@ -833,11 +840,6 @@ body{
             align-items: center;
 
             color: #3A3838;
-
-            &:hover{
-                background: #ED1A3A;
-                color: #fff;
-            }
         }
       }
     .content{
@@ -855,9 +857,10 @@ body{
                 flex-direction: row !important;
                 border-bottom: 1px solid #C4C4C4;
                 border-radius: unset !important;
-                height: 150px !important;
+                height: 120px !important;
                 width: 100% !important;
-                padding-top:20px;
+                padding-top: 16px;
+                padding-bottom: 16px;
                 margin-bottom: unset !important;
 
                 
@@ -888,7 +891,7 @@ body{
                         }
                         .addp{
                             display: block !important;
-                            margin-left: 7px !important;
+                            margin-left: 25px !important;
                             font-size: 15px !important;
                         }
                         .quantity{
@@ -989,6 +992,7 @@ body{
                         font-weight: bold;
                         font-size: 15px;
                         line-height: 19px;
+                        margin-right: 40px;
 
                         color: #FFFFFF;
                     }
@@ -1198,11 +1202,10 @@ body{
 
                                 color: #3A3838;
                                 transition: all 0.4s;
-                                &:hover{
-                                    color: #FFFFFF;
-                                    background: #ED1A3A;
-                                    transition: all 0.4s;
-                                }
+                            }
+                            .actual{
+                                background: #ED1A3A;
+                                color: #FFFFFF;
                             }
                         }
                         .price{
@@ -1237,8 +1240,8 @@ body{
                         color: #3A3838;
 
                         .count{
-                            width: auto;
-                            height: auto;
+                            width: 25px !important;
+                            height: auto !important;
                             background:url(../img/circle.svg);
                             background-position: center;
                             background-repeat: no-repeat;
@@ -1291,7 +1294,7 @@ body{
     .card-swim{
         display: flex !important;
         position: fixed;
-        bottom: 15px;
+        bottom: 60px;
         left: 19px;
         width: auto;
         padding-right: 15px;

@@ -6,6 +6,8 @@ var swiper = new Swiper('.swiper-container', {
       draggable: true,
       snapOnRelease: false,
     },
+    centeredSlides: true,
+    loop:true,
   });
 
   //modal
@@ -36,3 +38,41 @@ $("#back").on("click", function () {
   document.getElementById("popup").style.display = "none";
   document.getElementById("body").style.overflow = "visible";
 });
+
+$(document).on('click', '.big', function (){
+  $(this).addClass("actual");
+  $(this).next().removeClass("actual");
+})
+$(document).on('click', '.small', function (){
+  $(this).addClass("actual");
+  $(this).prev().removeClass("actual");
+})
+$("#back").on("click", function () {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("body").style.overflow = "visible";
+});
+
+$( document ).ready(function() {
+  console.log('хуй');
+  if ($(window).width() <= 1149){
+    $(".catalog-item").removeClass("hover-item");
+  }
+  
+  if ($(window).width() >= 1149){
+    $(".catalog-item").addClass("hover-item");
+  }
+});
+
+$( window ).resize(function() {
+  console.log('2 хуя');
+  if ($(window).width() <= 1149){
+    $(".catalog-item").removeClass("hover-item");
+  }
+  
+  if ($(window).width() >= 1149){
+    $(".catalog-item").addClass("hover-item");
+  }
+});
+
+
+
