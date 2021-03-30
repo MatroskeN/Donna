@@ -53,7 +53,6 @@ $("#back").on("click", function () {
 });
 
 $( document ).ready(function() {
-  console.log('хуй');
   if ($(window).width() <= 1149){
     $(".catalog-item").removeClass("hover-item");
   }
@@ -64,7 +63,6 @@ $( document ).ready(function() {
 });
 
 $( window ).resize(function() {
-  console.log('2 хуя');
   if ($(window).width() <= 1149){
     $(".catalog-item").removeClass("hover-item");
   }
