@@ -6,8 +6,6 @@ var swiper = new Swiper('.swiper-container', {
       draggable: true,
       snapOnRelease: false,
     },
-    centeredSlides: true,
-    loop:true,
   });
 
   //modal
@@ -39,6 +37,7 @@ $("#back").on("click", function () {
   document.getElementById("body").style.overflow = "visible";
 });
 
+// 35/25см
 $(document).on('click', '.big', function (){
   $(this).addClass("actual");
   $(this).next().removeClass("actual");
@@ -52,6 +51,8 @@ $("#back").on("click", function () {
   document.getElementById("body").style.overflow = "visible";
 });
 
+
+//наведение на карточку товара в мобилке
 $( document ).ready(function() {
   if ($(window).width() <= 1149){
     $(".catalog-item").removeClass("hover-item");
@@ -72,5 +73,10 @@ $( window ).resize(function() {
   }
 });
 
+//выделение категории в мобилке
+$(document).on('click', '.swiper-slide', function (){
+  $(".swiper-slide").removeClass("hover-category");
+  $(this).addClass("hover-category");
+})
 
 

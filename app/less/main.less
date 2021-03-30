@@ -440,10 +440,14 @@ body{
                         color: #3A3838;
 
                         .count{
-                            -webkit-appearance: none !important;
-                            width: 25px !important;
+                            -webkit-appearance: none;
+                            -webkit-box-sizing: content-box;
+                            -webkit-box-align: start;
+                            -webkit-border-fit: lines;
+                            -webkit-margin-collapse: discard;
+                            width: 18px !important;
                             height: auto !important;
-                            background:url(../img/circle.svg);
+                            background:url(../img/circle.png);
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: 100%;
@@ -455,7 +459,7 @@ body{
                             }
 
                             &:hover{
-                                background:url(../img/dcircle.svg);
+                                background:url(../img/dark-circle.png);
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 background-size: 100%;
@@ -808,8 +812,8 @@ body{
           margin-left: 10px;
           
       }
-      .swiper-slide-active{
-          .slider-btn{
+      .hover-category{
+        .slider-btn{
             background: #ED1A3A !important;
             color: #fff !important;
           }
@@ -844,7 +848,6 @@ body{
         }
       }
     .content{
-        max-width: 320px !important;
         .menu{
             display: none !important;
         }
@@ -862,6 +865,9 @@ body{
                 width: 100% !important;
                 padding-top: 16px;
                 padding-bottom: 16px;
+                padding-right: 20px;
+                padding-left: 20px;
+                margin-right: unset !important;
                 margin-bottom: unset !important;
 
                 
@@ -871,12 +877,14 @@ body{
                     margin-top: 11px !important;
                 }
                 .reciepe{
+                    padding-left: unset !important;
                     .title-pizza{
                         font-size: 16px !important;
                         text-transform: unset !important;
                     }
                     .compos{
                         font-size: 11px !important;
+                        max-width: 194px;
                     }
                     .choose{
                         display: none !important;
@@ -1242,8 +1250,12 @@ body{
                         color: #3A3838;
 
                         .count{
-                            -webkit-appearance: none !important;
-                            width: 25px !important;
+                            -webkit-appearance: none;
+                            -webkit-box-sizing: content-box;
+                            -webkit-box-align: start;
+                            -webkit-border-fit: lines;
+                            -webkit-margin-collapse: discard;
+                            width: 18px !important;
                             height: auto !important;
                             background:url(../img/circle.png);
                             background-position: center;

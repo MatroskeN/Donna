@@ -475,10 +475,14 @@ body .content .catalog .catalog-item .reciepe .card-bottom .quantity {
   color: #3A3838;
 }
 body .content .catalog .catalog-item .reciepe .card-bottom .quantity .count {
-  -webkit-appearance: none !important;
-  width: 25px !important;
+  -webkit-appearance: none;
+  -webkit-box-sizing: content-box;
+  -webkit-box-align: start;
+  -webkit-border-fit: lines;
+  -webkit-margin-collapse: discard;
+  width: 18px !important;
   height: auto !important;
-  background: url(../img/circle.svg);
+  background: url(../img/circle.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -488,7 +492,7 @@ body .content .catalog .catalog-item .reciepe .card-bottom .quantity .count:nth-
   margin-right: 14px;
 }
 body .content .catalog .catalog-item .reciepe .card-bottom .quantity .count:hover {
-  background: url(../img/dcircle.svg);
+  background: url(../img/dark-circle.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -824,7 +828,7 @@ body footer .footer-content .foot-links .madein a:hover {
             flex-direction: row;
     margin-left: 10px;
   }
-  .swiper-slide-active .slider-btn {
+  .hover-category .slider-btn {
     background: #ED1A3A !important;
     color: #fff !important;
   }
@@ -871,9 +875,6 @@ body footer .footer-content .foot-links .madein a:hover {
             align-items: center;
     color: #3A3838;
   }
-  .content {
-    max-width: 320px !important;
-  }
   .content .menu {
     display: none !important;
   }
@@ -893,6 +894,9 @@ body footer .footer-content .foot-links .madein a:hover {
     width: 100% !important;
     padding-top: 16px;
     padding-bottom: 16px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: unset !important;
     margin-bottom: unset !important;
   }
   .content .catalog .catalog-item .pizza-pic {
@@ -900,12 +904,16 @@ body footer .footer-content .foot-links .madein a:hover {
     height: 97px !important;
     margin-top: 11px !important;
   }
+  .content .catalog .catalog-item .reciepe {
+    padding-left: unset !important;
+  }
   .content .catalog .catalog-item .reciepe .title-pizza {
     font-size: 16px !important;
     text-transform: unset !important;
   }
   .content .catalog .catalog-item .reciepe .compos {
     font-size: 11px !important;
+    max-width: 194px;
   }
   .content .catalog .catalog-item .reciepe .choose {
     display: none !important;
@@ -1295,8 +1303,12 @@ body footer .footer-content .foot-links .madein a:hover {
     color: #3A3838;
   }
   .popup .popup-item .reciepe .card-bottom .quantity .count {
-    -webkit-appearance: none !important;
-    width: 25px !important;
+    -webkit-appearance: none;
+    -webkit-box-sizing: content-box;
+    -webkit-box-align: start;
+    -webkit-border-fit: lines;
+    -webkit-margin-collapse: discard;
+    width: 18px !important;
     height: auto !important;
     background: url(../img/circle.png);
     background-position: center;
